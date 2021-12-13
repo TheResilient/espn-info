@@ -8,7 +8,7 @@ def match_results(url):
     team = {}
     url = url+'/squads'
     req = requests.get(url,headers = {
-                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:55.0) Gecko/20100101 Firefox/55.0',
+                'User-Agent': 'Mozilla/5.0 (Windows NT x.y; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0',
             })
     soup = bs(req.content,'html.parser')
     link = soup.find_all('a',class_ = 'black-link d-none d-md-inline-block pl-2')
@@ -21,7 +21,7 @@ def match_results(url):
         # mat.append(code)
         url1 = 'https://www.espncricinfo.com'+i['href']
         req1 = requests.get(url1,headers = {
-                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:55.0) Gecko/20100101 Firefox/55.0',
+                'User-Agent': 'Mozilla/5.0 (Windows NT x.y; Win64; x64; rv:10.0) Gecko/20100101 Firefox/10.0',
             })
         soup1 = bs(req1.content,'html.parser')
         name = soup1.find_all('a',class_='h3 benton-bold name black-link d-inline')

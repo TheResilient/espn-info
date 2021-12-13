@@ -41,6 +41,6 @@ def Squad_view(requests):
     con = {
         'mat': mat
     }
-    return render(requests,'mat.html',con)
+    return render(requests,'home.html',con)
 
 
