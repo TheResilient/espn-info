@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+
+    <h1>Homepage</h1>
+    <!-- <form action="/home/" method="post">
+        <label for="your_name">Your name: </label>
+        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+        <input type="submit" value="OK">
+        
+    </form> -->
+    <form action="/" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" value="Submit">
+    </form>
+
+    
+    {%for i in mat%}
+    {{i.name}}
+    <br>
+    {%endfor%}
+    
+    <!-- <label for="match_id">match id</label>
+  <input type="text" id="match_id" name="id"><br><br>
+     <input type="submit" value='submit'> -->
+</body>
+</html>
